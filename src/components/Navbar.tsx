@@ -12,13 +12,13 @@ const Navbar = () => {
           <div>
             <Show when="signed-out">
               <div className="flex gap-2">
-              
-                <Button variant="outline">
-                  <SignInButton />
-                </Button>
-                <Button>
-                  <SignUpButton />
-                </Button>
+                <SignInButton>
+                  <Button variant="outline">SignIn</Button>
+                </SignInButton>
+
+                <SignUpButton mode="modal">
+                  <Button>SignUp</Button>
+                </SignUpButton>
               </div>
             </Show>
             <Show when="signed-in">
